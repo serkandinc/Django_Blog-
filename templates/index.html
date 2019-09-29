@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% block body %}
+
+<p>
+
+{% if request.user.is_authenticated %}
+
+  <b>  Selam, {{request.user.username}} </b>
+
+{% else %}
+    Henüz bir giriş bulunmamaktadır...
+{% endif %}
+</p>
+<div class="jumbotron text-center">
+  <h3>Veri Bilimi Bloğuna Hoşgeldiniz</h3>
+<img src="{% static 'images/ggb.jpg'%}" alt="">
+<br><br>
+  
+</div>
+{% endblock body %}
